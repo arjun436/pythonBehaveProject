@@ -22,7 +22,10 @@ chrome_options.add_argument("--disable-extensions")
 # chrome_options.add_experimental_option("debuggerAddress", "localhost:8181")
 # cmd -path to chrome.exe \\>chrome.exe --remote-debugger-port=9222 --user-data-dir="c:\chromedata"
 
-driver = webdriver.Chrome(service=service, options=chrome_options)
+#driver = webdriver.Chrome(service=service, options=chrome_options)
+driver = webdriver.Remote(command_executor = 'http://127.0.0.1:4444/wd/hub',
+            options=chrome_options)
+
 
 @given('launch chrome browser')
 def launchBrowser(self):
@@ -47,6 +50,6 @@ def verifyLogo(self):
 
 @then('close browser')
 def closeBrowser(self):
-    #driver.close()
-    #driver.quit()
+    driver.close()
+    driver.quit()
     print("waiting")
