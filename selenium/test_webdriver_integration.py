@@ -53,7 +53,7 @@ def test_dologin(username, password, get_browser):
     #assert 1 == 2
     # allure.attach(driver.get_screenshot_as_png(), name='dologin',attachment_type=AttachmentType.PNG)
 
-# run parallel mode install pip install pytest-xdist or add addopts = -n3 in pytest.ini file
-# run the test with  pytest test_webdriver_integration.py -n 3 where 3 is nuber of parallel tests
-# run  pytest test_webdriver_integration.py -n 3 --alluredir="./allurereports" to generate allure json
-# run allure serve ./allurereports
+# run parallel mode install -->  pip install pytest-xdist or add addopts = -n3 <--in pytest.ini file
+# run the test with -->  pytest test_webdriver_integration.py -n 3 <-- where 3 is nuber of parallel tests
+# run --> pytest test_webdriver_integration.py -n 3 --alluredir="./allurereports" <--to generate allure json
+# run --> allure serve ./allurereports

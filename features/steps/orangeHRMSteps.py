@@ -19,7 +19,7 @@ chrome_options.add_argument('start-maximized') #
 chrome_options.add_argument('disable-infobars')
 chrome_options.add_argument("--disable-extensions")
 #, service_args=["--verbose", "--log-path=cd.log"])
-chrome_options.add_experimental_option("debuggerAddress", "localhost:8989")
+# chrome_options.add_experimental_option("debuggerAddress", "localhost:8181")
 # cmd -path to chrome.exe \\>chrome.exe --remote-debugger-port=9222 --user-data-dir="c:\chromedata"
 
 driver = webdriver.Chrome(service=service, options=chrome_options)
